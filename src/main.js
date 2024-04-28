@@ -15,4 +15,5 @@ var person = {
     age: 21,
 };
 var fruits = ['Apple', 'Banana', 'Grape', 1];
-console.log(person);
+var book = ['business', 1500, false];
+console.log(book);
