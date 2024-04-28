@@ -14,4 +14,5 @@ var person = {
     },
     age: 21,
 };
-console.log(person.name);
+var fruits = ['Apple', 'Banana', 'Grape', 1];
+console.log(person);
