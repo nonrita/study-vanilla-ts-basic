@@ -22,11 +22,17 @@ class Person {
     }
 }
 ;
-const quill = new Person('Quill', 20);
-quill.incrementAge();
-// quill.age = 41;
-quill.greeting();
-const anotherQuill = {
-    anotherGreeting: quill.greeting
-};
-// anotherQuill.anotherGreeting();
+class Teacher extends Person {
+    constructor(name, age, subject) {
+        super(name, age);
+        Object.defineProperty(this, "subject", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: subject
+        });
+    }
+}
+;
+const teacher = new Teacher('Quill', 30, 'Math');
+teacher.greeting();
