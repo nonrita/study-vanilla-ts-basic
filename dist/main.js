@@ -1,21 +1,22 @@
-var hasValue = true;
-var count = 10;
-var float = 3.14;
-var negative = -0.12;
-var single = 'hello';
-var double = "hello";
-var back = "hello";
-var hello;
+"use strict";
+let hasValue = true;
+let count = 10;
+let float = 3.14;
+let negative = -0.12;
+let single = 'hello';
+let double = "hello";
+let back = `hello`;
+let hello;
 hello = 'hello';
-var person = {
+const person = {
     name: {
         first: "Jack",
         last: "Smith"
     },
     age: 21,
 };
-var fruits = ['Apple', 'Banana', 'Grape', 1];
-var book = ['business', 1500, false];
+const fruits = ['Apple', 'Banana', 'Grape', 1];
+const book = ['business', 1500, false];
 var CoffeeSize;
 (function (CoffeeSize) {
     CoffeeSize[CoffeeSize["SHORT"] = 0] = "SHORT";
@@ -24,22 +25,22 @@ var CoffeeSize;
     CoffeeSize[CoffeeSize["VENTI"] = 3] = "VENTI";
 })(CoffeeSize || (CoffeeSize = {}));
 ;
-var coffee = {
+const coffee = {
     hot: true,
     size: CoffeeSize.TALL,
 };
-var anything = true;
+let anything = true;
 anything = 'hello';
 anything = ['hello', 23, true];
 anything = {};
 anything.fjiafjaj = 'faijfi';
-var banana = 'banana';
+let banana = 'banana';
 banana = anything; //string型と宣言しているものにもanyは全てに入れる
-var unionType = 10;
-var unionTYpes = [21, 'hello'];
-var apple = 'apple'; //constで宣言したらLitteral型になる
-var clothSize = 'small';
-var cloth = {
+let unionType = 10;
+let unionTYpes = [21, 'hello'];
+const apple = 'apple'; //constで宣言したらLitteral型になる
+let clothSize = 'small';
+const cloth = {
     color: 'white',
     size: clothSize,
 };
@@ -52,21 +53,21 @@ function sayHello() {
     // console.log('Hello');
 }
 // console.log(sayHello());
-var tmp;
-var anotherAdd = function (num1, num2) {
+let tmp;
+const anotherAdd = function (num1, num2) {
     return num1 + num2;
 };
-var doubleNumber = function (num) { return num * 2; };
+const doubleNumber = num => num * 2;
 function doubleAndHandle(num, cd) {
-    var doubleNum = cd(num * 2);
-    // console.log(doubleNum * 2);
+    const doubleNum = cd(num * 2);
+    console.log(doubleNum * 2);
 }
-doubleAndHandle(21, function (doubleNum) {
+doubleAndHandle(21, doubleNum => {
     return doubleNum;
 });
-var unknownInput;
-var anyInput;
-var text;
+let unknownInput;
+let anyInput;
+let text;
 unknownInput = 'hello';
 unknownInput = 21;
 unknownInput = true;

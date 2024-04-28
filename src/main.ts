@@ -72,7 +72,7 @@ const doubleNumber: (num: number) => number = num => num * 2;
 
 function doubleAndHandle(num: number, cd: (num: number) => number): void {
     const doubleNum = cd(num * 2);
-    // console.log(doubleNum * 2);
+    console.log(doubleNum * 2);
 }
 
 doubleAndHandle(21, doubleNum => {
