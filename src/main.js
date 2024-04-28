@@ -36,3 +36,5 @@ anything = {};
 anything.fjiafjaj = 'faijfi';
 var banana = 'banana';
 banana = anything; //string型と宣言しているものにもanyは全てに入れる
+var unionType = 10;
+var unionTYpes = [21, 'hello'];

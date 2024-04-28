@@ -40,3 +40,6 @@ anything = {};
 anything.fjiafjaj = 'faijfi';
 let banana = 'banana';
 banana = anything;  //string型と宣言しているものにもanyは全てに入れる
+
+let unionType: number | string = 10;
+let unionTYpes: (number | string)[] = [21, 'hello'];
