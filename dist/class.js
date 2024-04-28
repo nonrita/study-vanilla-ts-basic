@@ -1,5 +1,11 @@
 "use strict";
 class Person {
+    static isAdult(age) {
+        if (age > 17)
+            true;
+        return false;
+    }
+    ;
     constructor(name, age) {
         Object.defineProperty(this, "name", {
             enumerable: true,
@@ -21,6 +27,12 @@ class Person {
         console.log(`Hello My name is ${this.name}. I am ${this.age} years old`);
     }
 }
+Object.defineProperty(Person, "species", {
+    enumerable: true,
+    configurable: true,
+    writable: true,
+    value: 'Homo sapiens'
+});
 ;
 class Teacher extends Person {
     get subject() {
@@ -49,7 +61,7 @@ class Teacher extends Person {
     }
 }
 ;
-const teacher = new Teacher('Quill', 30, 'Math');
-teacher.subject = 'Music';
-console.log(teacher.subject);
-teacher.greeting();
+console.log(Person.species);
+console.log(Person.isAdult(38));
+console.log(Teacher.species);
+console.log(Teacher.isAdult(38));
