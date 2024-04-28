@@ -1,20 +1,18 @@
 "use strict";
 class Person {
-    constructor(initName, initAge) {
+    constructor(name, age) {
         Object.defineProperty(this, "name", {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: void 0
+            value: name
         });
         Object.defineProperty(this, "age", {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: void 0
+            value: age
         });
-        this.name = initName;
-        this.age = initAge;
     }
     incrementAge() {
         this.age += 1;
