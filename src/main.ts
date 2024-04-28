@@ -43,3 +43,14 @@ banana = anything;  //string型と宣言しているものにもanyは全てに�
 
 let unionType: number | string = 10;
 let unionTYpes: (number | string)[] = [21, 'hello'];
+
+const apple = 'apple'; //constで宣言したらLitteral型になる
+let clothSize: 'small' | 'medium' | 'large' = 'small';
+const cloth: {
+    color: string,
+    size: 'small' | 'medium' | 'large',
+} = {
+    color: 'white',
+    size: clothSize,
+}
+cloth.size = 'large';

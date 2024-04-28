@@ -38,3 +38,10 @@ var banana = 'banana';
 banana = anything; //string型と宣言しているものにもanyは全てに入れる
 var unionType = 10;
 var unionTYpes = [21, 'hello'];
+var apple = 'apple'; //constで宣言したらLitteral型になる
+var clothSize = 'small';
+var cloth = {
+    color: 'white',
+    size: clothSize,
+};
+cloth.size = 'large';
