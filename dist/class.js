@@ -25,6 +25,7 @@ class Person {
     }
     greeting() {
         console.log(`Hello My name is ${this.name}. I am ${this.age} years old`);
+        this.explainJob();
     }
 }
 Object.defineProperty(Person, "species", {
@@ -35,6 +36,9 @@ Object.defineProperty(Person, "species", {
 });
 ;
 class Teacher extends Person {
+    explainJob() {
+        console.log(`I am a teacher and I teach ${this.subject}`);
+    }
     get subject() {
         if (!this._subject) {
             throw new Error('There is no subject.');
@@ -56,12 +60,7 @@ class Teacher extends Person {
             value: _subject
         });
     }
-    greeting() {
-        console.log(`Hello My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
-    }
 }
 ;
-console.log(Person.species);
-console.log(Person.isAdult(38));
-console.log(Teacher.species);
-console.log(Teacher.isAdult(38));
+const teacher = new Teacher('Quill', 30, 'Math');
+teacher.greeting();
