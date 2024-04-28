@@ -45,3 +45,7 @@ var cloth = {
     size: clothSize,
 };
 cloth.size = 'large';
+function add(num1, num2) {
+    return num1 + num2;
+}
+;
