@@ -19,4 +19,4 @@ quill.greeting();
 const anotherQuill = {
     anotherGreeting: quill.greeting
 };
-anotherQuill.anotherGreeting();
+// anotherQuill.anotherGreeting();
