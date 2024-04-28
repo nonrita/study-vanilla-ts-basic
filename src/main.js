@@ -64,3 +64,13 @@ function doubleAndHandle(num, cd) {
 doubleAndHandle(21, function (doubleNum) {
     return doubleNum;
 });
+var unknownInput;
+var anyInput;
+var text;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+text = anyInput;
+if (typeof unknownInput === 'string') {
+    text = unknownInput;
+}
