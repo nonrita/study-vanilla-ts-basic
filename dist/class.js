@@ -23,13 +23,25 @@ class Person {
 }
 ;
 class Teacher extends Person {
-    constructor(name, age, subject) {
+    get subject() {
+        if (!this._subject) {
+            throw new Error('There is no subject.');
+        }
+        return this._subject;
+    }
+    set subject(value) {
+        if (!value) {
+            throw new Error('There is no subject.');
+        }
+        this._subject = value;
+    }
+    constructor(name, age, _subject) {
         super(name, age);
-        Object.defineProperty(this, "subject", {
+        Object.defineProperty(this, "_subject", {
             enumerable: true,
             configurable: true,
             writable: true,
-            value: subject
+            value: _subject
         });
     }
     greeting() {
@@ -38,4 +50,6 @@ class Teacher extends Person {
 }
 ;
 const teacher = new Teacher('Quill', 30, 'Math');
+teacher.subject = 'Music';
+console.log(teacher.subject);
 teacher.greeting();
