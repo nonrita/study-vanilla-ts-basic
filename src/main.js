@@ -53,3 +53,14 @@ function sayHello() {
 }
 console.log(sayHello());
 var tmp;
+var anotherAdd = function (num1, num2) {
+    return num1 + num2;
+};
+var doubleNumber = function (num) { return num * 2; };
+function doubleAndHandle(num, cd) {
+    var doubleNum = cd(num * 2);
+    console.log(doubleNum * 2);
+}
+doubleAndHandle(21, function (doubleNum) {
+    return doubleNum;
+});
