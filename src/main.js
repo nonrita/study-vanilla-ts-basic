@@ -28,7 +28,6 @@ var coffee = {
     hot: true,
     size: CoffeeSize.TALL,
 };
-console.log(coffee);
 var anything = true;
 anything = 'hello';
 anything = ['hello', 23, true];
@@ -49,3 +48,8 @@ function add(num1, num2) {
     return num1 + num2;
 }
 ;
+function sayHello() {
+    console.log('Hello');
+}
+console.log(sayHello());
+var tmp;
