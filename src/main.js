@@ -29,3 +29,10 @@ var coffee = {
     size: CoffeeSize.TALL,
 };
 console.log(coffee);
+var anything = true;
+anything = 'hello';
+anything = ['hello', 23, true];
+anything = {};
+anything.fjiafjaj = 'faijfi';
+var banana = 'banana';
+banana = anything; //string型と宣言しているものにもanyは全てに入れる

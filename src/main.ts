@@ -32,3 +32,11 @@ const coffee = {
 };
 
 console.log(coffee);
+
+let anything: any = true;
+anything = 'hello';
+anything = ['hello', 23, true];
+anything = {};
+anything.fjiafjaj = 'faijfi';
+let banana = 'banana';
+banana = anything;  //string型と宣言しているものにもanyは全てに入れる
