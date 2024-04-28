@@ -63,3 +63,9 @@ function sayHello(): void {
 }
 console.log(sayHello());
 let tmp: undefined;
+
+const anotherAdd: (n1: number, n2: number) => number = function (num1, num2) {
+    return num1 + num2;
+};
+
+const doubleNumber: (num: number) => number = num => num * 2;
