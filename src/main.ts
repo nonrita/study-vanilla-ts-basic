@@ -19,4 +19,16 @@ const fruits = ['Apple', 'Banana', 'Grape', 1];
 
 const book: [string, number, boolean] = ['business', 1500, false];
 
-console.log(book);
+enum CoffeeSize {
+    SHORT,
+    TALL,
+    GRANDE,
+    VENTI,
+};
+
+const coffee = {
+    hot: true,
+    size: CoffeeSize.TALL,
+};
+
+console.log(coffee);
