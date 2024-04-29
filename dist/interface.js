@@ -3,14 +3,12 @@ let addFunc;
 addFunc = (n1, n2) => {
     return n1 + n2;
 };
+const nameable = {
+    name: 'kenken',
+    nickName: 'kenchan'
+};
 class Developer {
-    constructor(name, age, experience) {
-        Object.defineProperty(this, "name", {
-            enumerable: true,
-            configurable: true,
-            writable: true,
-            value: name
-        });
+    constructor(age, experience, name) {
         Object.defineProperty(this, "age", {
             enumerable: true,
             configurable: true,
@@ -23,8 +21,14 @@ class Developer {
             writable: true,
             value: experience
         });
+        Object.defineProperty(this, "name", {
+            enumerable: true,
+            configurable: true,
+            writable: true,
+            value: name
+        });
     }
-    greeting(message) {
+    greeting(message = 'Hello') {
         console.log(message);
     }
 }
@@ -36,4 +40,8 @@ const tmpDeveloper = {
         console.log(message);
     }
 };
-const user = tmpDeveloper;
+const user = new Developer(21, 3, 'ken');
+if (user.name) {
+    user.name.toUpperCase();
+}
+console.log(user.name);
